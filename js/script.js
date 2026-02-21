@@ -86,9 +86,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
- 
+  // Select all nav links that reference an ID (hash links)
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default jump
 
+      const targetId = this.getAttribute('href'); // e.g., #gallery
+      const targetSection = document.querySelector(targetId);
 
+      if (targetSection) {
+        // Smooth scroll to section
+        targetSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start' // Align section to top of viewport
+        });
+
+        // Optional: update URL hash without jumping
+        history.pushState(null, null, targetId);
+      }
+    });
+  });
 });
+
+
+
 
 

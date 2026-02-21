@@ -696,3 +696,97 @@ body {
   padding-top: 100px; /* moving bar (50px) + header (~50px) */
 }
 
+
+
+/* ===== Interviews | Media Section ===== */
+
+.media-section {
+  padding: 80px 0;
+  background: #0b1230;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.video-card iframe {
+  width: 100%;
+  height: 220px;
+  border-radius: 10px;
+}
+
+.video-card h4 {
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.video-item {
+  text-align: center;
+}
+
+
+.watch-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffffff;
+  background: #ff0000;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.watch-btn:hover {
+  background: #cc0000;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 0, 0, 0.4);
+}
+
+
+
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+}
+
+/* Hide dropdown initially */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #0b1230;
+  min-width: 180px;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: none;
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Show on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown links */
+.dropdown-menu li {
+  padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  color: #e63946;
+  fontsize: 14px;
+}
